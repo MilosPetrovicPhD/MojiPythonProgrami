@@ -17,8 +17,7 @@ for filename in pdfFiles:
     # Loop through all the pages (except the first) and add them.
     for pageNum in range(0, len(pdfReader.pages)):
         pageObj = pdfReader.pages[pageNum]
-        pageObj.rotate(270)
-#        pdfWriter.add_page(pageObj)
+        pdfWriter.add_page(pageObj)
 
 # Save the resulting PDF to a file.
 pdfOutput = open('p.pdf', 'wb')
